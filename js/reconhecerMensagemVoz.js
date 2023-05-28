@@ -8,9 +8,10 @@ recognition.start();
 recognition.addEventListener('result', onSpeak);
 
 function onSpeak(e) {
-  const chute = e.results[0][0].transcript;
+  const chute = e.results[0][0].transcript.slice(0, -1);
 
   mostraChuteNaTela(chute);
+  verificarSeChutePossuiValorValido(chute);
 }
 
 function mostraChuteNaTela(chute) {
@@ -20,3 +21,5 @@ function mostraChuteNaTela(chute) {
   <span class="box">${chute}</span>
   `;
 }
+
+recognition.addEventListener('end', () => recognition.start());

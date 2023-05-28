@@ -24,6 +24,11 @@ h1 {
   font-size: 5em;
 }
 
+h2 {
+  font-size: 4em;
+  font-weight: bold;
+}
+
 h3 {
   font-size: 3em;
 }
