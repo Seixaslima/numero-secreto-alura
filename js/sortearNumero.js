@@ -7,8 +7,6 @@ function sortearNumero() {
   return parseInt(Math.random() * range + menorValor);
 }
 
-console.log('o numero sorteado foi:', numeroSecreto);
-
 const elementoMenorValor = document.getElementById('menor-valor');
 elementoMenorValor.innerHTML = menorValor;
 
